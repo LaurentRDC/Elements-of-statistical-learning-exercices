@@ -1,0 +1,29 @@
+cabal-version:      3.4
+name:               ESL
+version:            0.1.0.0
+synopsis:           Computational exercices for the book Elements of Statistical Learning
+license:            MIT
+license-file:       LICENSE
+author:             Laurent René de Cotret
+maintainer:         laurent.decotret@outlook.com
+category:           Math
+build-type:         Simple
+
+-- Extra source files to be distributed with the package, such as examples, or a tutorial module.
+-- extra-source-files:
+
+common common
+    ghc-options:    -Wall
+    build-depends:    attoparsec
+                    , base >=4.17.0.0 && < 5
+                    , bytestring
+                    , hmatrix
+                    , statistics
+                    , text 
+                    , vector
+
+executable Exercise2-8
+    import:           common
+    main-is:          Exercise2-8.hs
+    hs-source-dirs:   exercices
+    default-language: GHC2021
